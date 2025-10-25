@@ -1,0 +1,261 @@
+/* ----------------------------------------------------------
+ 🌈 GLOBAL STYLE & VARIABLES
+---------------------------------------------------------- */
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --dark: #1e293b;
+  --light: #f8fafc;
+  --text: #334155;
+  --muted: #64748b;
+  --radius: 12px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  background-color: var(--light);
+  line-height: 1.6;
+}
+
+/* Container Utility */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ----------------------------------------------------------
+ 🧭 NAVBAR
+---------------------------------------------------------- */
+.navbar {
+  background: #fff;
+  box-shadow: var(--shadow);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--dark);
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.btn-login {
+  background: var(--primary);
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-login:hover {
+  background: var(--primary-dark);
+}
+
+/* ----------------------------------------------------------
+ 🎬 HERO SECTION
+---------------------------------------------------------- */
+.hero {
+  height: 80vh;
+  background: linear-gradient(to right, #1e3a8a, #2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.hero-content h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #fff;
+  color: var(--primary);
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-primary:hover {
+  background: var(--dark);
+  color: #fff;
+}
+
+/* ----------------------------------------------------------
+ 🎓 COURSES SECTION
+---------------------------------------------------------- */
+.courses-section {
+  padding: 70px 0;
+  background: var(--light);
+}
+
+.section-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.course-card {
+  background: #fff;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.course-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.course-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 16px;
+  color: var(--dark);
+}
+
+.course-card p {
+  margin: 0 16px 20px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.btn-secondary {
+  display: inline-block;
+  margin: 0 16px 20px;
+  padding: 8px 16px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-dark);
+}
+
+/* ----------------------------------------------------------
+ 📺 COURSE DETAIL PAGE (Opsional)
+---------------------------------------------------------- */
+.course-detail {
+  padding: 60px 0;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 30px 0;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius);
+}
+
+.course-description h3 {
+  margin-top: 25px;
+  color: var(--dark);
+}
+
+/* ----------------------------------------------------------
+ ⚓ FOOTER
+---------------------------------------------------------- */
+footer {
+  background: var(--dark);
+  color: #fff;
+  text-align: center;
+  padding: 25px 0;
+  margin-top: 60px;
+  font-size: 0.9rem;
+}
+
+/* ----------------------------------------------------------
+ 📱 RESPONSIVE DESIGN
+---------------------------------------------------------- */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
