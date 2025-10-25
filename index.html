@@ -18,18 +18,28 @@
 
 <body>
   <!-- 🌐 Navbar -->
-  <nav class="navbar">
-    <div class="container">
-      <h1 class="logo">BISNIS<span>SCALE-UP</span></h1>
-      <ul class="nav-links">
-        <li><a href="#">Beranda</a></li>
-        <li><a href="#courses">Kelas</a></li>
-        <li><a href="#about">Tentang</a></li>
-        <li><a href="#contact">Kontak</a></li>
-      </ul>
-      <a href="#" class="btn-login">Masuk</a>
+<nav class="navbar">
+  <div class="container">
+    <h1 class="logo">BISNIS<span>SCALE-UP</span></h1>
+
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </div>
-  </nav>
+
+    <ul class="nav-links">
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#courses">Kelas</a></li>
+      <li><a href="#about">Tentang</a></li>
+      <li><a href="#contact">Kontak</a></li>
+    </ul>
+
+    <a href="#" class="btn-login">Masuk</a>
+  </div>
+</nav>
+
+
 
   <!-- 🎬 Hero Section -->
   <section class="hero">
@@ -40,36 +50,131 @@
       <a href="#courses" class="btn-primary">Lihat Kelas</a>
     </div>
   </section>
+<!-- 📚 Courses Section -->
+<section id="courses" class="courses-section">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-right">Kelas Populer</h2>
 
-  <!-- 📚 Courses Section -->
-  <section id="courses" class="courses-section">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-right">Kelas Populer</h2>
+    <!-- 🔹 Filter Kategori -->
+    <div class="filter-buttons" data-aos="fade-up">
+      <button class="filter-btn active" data-category="all">Semua</button>
+      <button class="filter-btn" data-category="bisnis">Bisnis</button>
+      <button class="filter-btn" data-category="mindset">Mindset</button>
+      <button class="filter-btn" data-category="leadership">Leadership</button>
+    </div>
 
-      <div class="courses-grid">
-        <div class="course-card" data-aos="zoom-in">
-          <img src="https://i.ytimg.com/vi/ScMzIvxBSi4/maxresdefault.jpg" alt="Kelas Strategi Bisnis Online">
-          <h3>Strategi Bisnis Online</h3>
-          <p>Pelajari langkah-langkah membangun bisnis digital dari nol.</p>
-          <a href="course.html" class="btn-secondary">Lihat Detail</a>
-        </div>
+    <!-- 🔹 Grid Kelas -->
+    <div class="courses-grid">
+      <!-- Kelas 1 -->
+      <div class="course-card" data-category="bisnis" data-aos="zoom-in">
+        <img src="https://i.ytimg.com/vi/ScMzIvxBSi4/maxresdefault.jpg" alt="Kelas Strategi Bisnis Online">
+        <span class="badge">💼 Bisnis</span>
+        <h3>Strategi Bisnis Online</h3>
+        <p>Pelajari langkah-langkah membangun bisnis digital dari nol.</p>
+        <a href="course.html" class="btn-secondary">Lihat Detail</a>
+      </div>
 
-        <div class="course-card" data-aos="zoom-in" data-aos-delay="100">
-          <img src="https://i.ytimg.com/vi/ysz5S6PUM-U/maxresdefault.jpg" alt="Kelas Mindset Entrepreneur">
-          <h3>Mindset Entrepreneur</h3>
-          <p>Bangun mental pebisnis yang tangguh dan visioner.</p>
-          <a href="course.html" class="btn-secondary">Lihat Detail</a>
-        </div>
+      <!-- Kelas 2 -->
+      <div class="course-card" data-category="mindset" data-aos="zoom-in" data-aos-delay="100">
+        <img src="https://i.ytimg.com/vi/ysz5S6PUM-U/maxresdefault.jpg" alt="Kelas Mindset Entrepreneur">
+        <span class="badge">🧠 Mindset</span>
+        <h3>Mindset Entrepreneur</h3>
+        <p>Bangun mental pebisnis yang tangguh dan visioner.</p>
+        <a href="course.html" class="btn-secondary">Lihat Detail</a>
+      </div>
 
-        <div class="course-card" data-aos="zoom-in" data-aos-delay="200">
-          <img src="https://i.ytimg.com/vi/jNQXAC9IVRw/maxresdefault.jpg" alt="Kelas Leadership & Manajemen Tim">
-          <h3>Leadership & Manajemen Tim</h3>
-          <p>Kuasi seni memimpin dan mengelola tim secara efektif.</p>
-          <a href="course.html" class="btn-secondary">Lihat Detail</a>
-        </div>
+      <!-- Kelas 3 -->
+      <div class="course-card" data-category="leadership" data-aos="zoom-in" data-aos-delay="200">
+        <img src="https://i.ytimg.com/vi/jNQXAC9IVRw/maxresdefault.jpg" alt="Kelas Leadership & Manajemen Tim">
+        <span class="badge">👥 Leadership</span>
+        <h3>Leadership & Manajemen Tim</h3>
+        <p>Kuasi seni memimpin dan mengelola tim secara efektif.</p>
+        <a href="course.html" class="btn-secondary">Lihat Detail</a>
+      </div>
+
+      <!-- Kelas 4 -->
+      <div class="course-card" data-category="bisnis" data-aos="zoom-in" data-aos-delay="300">
+        <img src="https://i.ytimg.com/vi/TAlKhARUcoY/maxresdefault.jpg" alt="Kelas Digital Marketing">
+        <span class="badge">💼 Bisnis</span>
+        <h3>Digital Marketing</h3>
+        <p>Pelajari strategi promosi produk menggunakan media sosial & iklan digital.</p>
+        <a href="course.html" class="btn-secondary">Lihat Detail</a>
+      </div>
+
+      <!-- Kelas 5 -->
+      <div class="course-card" data-category="mindset" data-aos="zoom-in" data-aos-delay="400">
+        <img src="https://i.ytimg.com/vi/lTTajzrSkCw/maxresdefault.jpg" alt="Kelas Growth Mindset">
+        <span class="badge">🧠 Mindset</span>
+        <h3>Growth Mindset</h3>
+        <p>Kembangkan pola pikir untuk selalu belajar dan tidak takut gagal.</p>
+        <a href="course.html" class="btn-secondary">Lihat Detail</a>
+      </div>
+
+      <!-- Kelas 6 -->
+      <div class="course-card" data-category="leadership" data-aos="zoom-in" data-aos-delay="500">
+        <img src="https://i.ytimg.com/vi/FY4Hjv6Rr7g/maxresdefault.jpg" alt="Kelas Komunikasi Efektif">
+        <span class="badge">👥 Leadership</span>
+        <h3>Komunikasi Efektif</h3>
+        <p>Bangun kemampuan berbicara dan mendengarkan agar tim makin solid.</p>
+        <a href="course.html" class="btn-secondary">Lihat Detail</a>
+      </div>
+
+      <!-- Kelas 7 -->
+      <div class="course-card" data-category="bisnis" data-aos="zoom-in" data-aos-delay="600">
+        <img src="https://i.ytimg.com/vi/ePbKGoIGAXY/maxresdefault.jpg" alt="Kelas Copywriting Penjualan">
+        <span class="badge">💼 Bisnis</span>
+        <h3>Copywriting Penjualan</h3>
+        <p>Pelajari cara menulis kalimat promosi yang menggugah dan menjual.</p>
+        <a href="course.html" class="btn-secondary">Lihat Detail</a>
+      </div>
+
+      <!-- Kelas 8 -->
+      <div class="course-card" data-category="mindset" data-aos="zoom-in" data-aos-delay="700">
+        <img src="https://i.ytimg.com/vi/4UZrsTqkcW4/maxresdefault.jpg" alt="Kelas Manajemen Waktu">
+        <span class="badge">🧠 Mindset</span>
+        <h3>Manajemen Waktu</h3>
+        <p>Atur waktu dengan bijak agar produktivitas meningkat setiap hari.</p>
+        <a href="course.html" class="btn-secondary">Lihat Detail</a>
+      </div>
+
+      <!-- Kelas 9 -->
+      <div class="course-card" data-category="leadership" data-aos="zoom-in" data-aos-delay="800">
+        <img src="https://i.ytimg.com/vi/1Ne1hqOXKKI/maxresdefault.jpg" alt="Kelas Public Speaking">
+        <span class="badge">👥 Leadership</span>
+        <h3>Public Speaking</h3>
+        <p>Tingkatkan kepercayaan diri dan kemampuan berbicara di depan umum.</p>
+        <a href="course.html" class="btn-secondary">Lihat Detail</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Script Filter -->
+<script>
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const courseCards = document.querySelectorAll(".course-card");
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const category = btn.getAttribute("data-category");
+
+      // ubah tombol aktif
+      filterBtns.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      // filter card
+      courseCards.forEach(card => {
+        if (category === "all" || card.getAttribute("data-category") === category) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+
+
 
   <!-- 🧭 Footer -->
   <footer>
